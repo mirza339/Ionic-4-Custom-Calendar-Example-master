@@ -1,0 +1,7 @@
+{
+  "name": "ionic-4-custom-calendar",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
