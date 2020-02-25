@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-home',
@@ -44,22 +43,11 @@ export class HomePage {
   };
   selectedDate = new Date();
 
-  constructor(private db: AngularFirestore) {
+  constructor() {
   }
 
   addNewEvent() {
-    let start = this.selectedDate;
-    let end = this.selectedDate;
-    end.setMinutes(end.getMinutes() + 60);
 
-    let event = {
-      title: 'Event #' + start.getMinutes(),
-      startTime: start,
-      endTime: end,
-      allDay: false,
-    };
-
-    this.db.collection(`events`).add(event);
   }
 
   onViewTitleChanged(title) {
